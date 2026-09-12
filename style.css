@@ -1,15 +1,10 @@
+@font-face {
+    font-family: "High Tower Text";
+    src: url("fonts/HighTowerText.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    background-color: #111111;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-h1 {
-    font-size: 64px;
-    margin-top: 20vh;
-}
-
-p {
-    font-size: 20px;
+    font-family: "High Tower Text", Georgia, serif;
 }
