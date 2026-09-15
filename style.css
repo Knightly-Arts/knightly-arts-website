@@ -11,13 +11,25 @@ body {
     font-family: "High Tower Text", Georgia, serif;
 }
 .neo-button {
-    border-color: #FF0000;
-    transition: border-color 0.8s ease, box-shadow 0.8s ease;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000000, #000000) padding-box,
+        linear-gradient(
+            90deg,
+            #FF0000 0%,
+            #FF8C00 50%,
+            #00AEEF 100%
+        ) border-box;
+    color: #FF0000;
+    transition:
+        background-position 0.8s ease,
+        color 0.8s ease,
+        box-shadow 0.8s ease;
 }
-
 .neo-button:hover {
-    border-color: #00AEEF;
+    background-position: 100% 0;
+    color: #00AEEF;
     box-shadow:
-        0 0 8px rgba(255, 140, 0, 0.35),
-        0 0 18px rgba(0, 174, 239, 0.2);
+        0 0 10px rgba(255, 140, 0, 0.3),
+        0 0 20px rgba(0, 174, 239, 0.2);
 }
