@@ -1,0 +1,23 @@
+/* Red Neon Variant */
+.btn-neon.variant-red {
+  --glow-color-1: #FF0055;
+  --glow-color-2: #FF5500;
+  --text-hover: #FF0055;
+  --border-color: #FF0055;
+}
+
+/* Green Cyber Variant */
+.btn-neon.variant-green {
+  --glow-color-1: #00FF66;
+  --glow-color-2: #00FFFF;
+  --text-hover: #00FF66;
+  --border-color: #00FF66;
+}
+
+/* Purple Synthwave Variant */
+.btn-neon.variant-purple {
+  --glow-color-1: #BF00FF;
+  --glow-color-2: #FF007F;
+  --text-hover: #FF007F;
+  --border-color: #BF00FF;
+}
