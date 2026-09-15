@@ -10,3 +10,14 @@ body {
     color: #FFFFFF;
     font-family: "High Tower Text", Georgia, serif;
 }
+.neo-button {
+    border-color: #FF0000;
+    transition: border-color 0.8s ease, box-shadow 0.8s ease;
+}
+
+.neo-button:hover {
+    border-color: #00AEEF;
+    box-shadow:
+        0 0 8px rgba(255, 140, 0, 0.35),
+        0 0 18px rgba(0, 174, 239, 0.2);
+}
