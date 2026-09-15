@@ -39,7 +39,7 @@ body {
   border-radius: 8px; /* Match button radius */
   
   /* ADDED: Subtle Glow on the gradient layer */
-  filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.5)); /* Base warm glow, shifts color during animation */
+  filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.3)); /* Base warm glow, shifts color during animation */
   
   /* ADDED: Short transition for the glow's appearance */
   transition: opacity 0.4s ease;
