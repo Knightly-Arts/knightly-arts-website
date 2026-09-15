@@ -11,52 +11,65 @@ body {
     font-family: "High Tower Text", Georgia, serif;
 }
 .neo-button {
-    position: relative;
-    display: inline-block;
-    border: 2px solid #FF0000;
-    color: #FFFFFF;
-    background: #000000;
-    overflow: hidden;
-    isolation: isolate;
-    transition: color 0.8s ease, border-color 0.8s ease;
+  position: relative;
+  display: inline-block;
+  border: 2px solid #FF0000;
+  color: #FFFFFF;
+  background: #000000;
+  overflow: hidden;
+  isolation: isolate;
+  
+  /* 1. Set outer border radius (e.g., 8px or 9999px for pill shape) */
+  border-radius: 8px;
+  
+  transition: color 0.8s ease, border-color 0.8s ease;
 }
 
 .neo-button::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    background: linear-gradient(
-        90deg,
-        #FF0000 0%,
-        #FF8C00 50%,
-        #00AEEF 100%
-    );
-    background-size: 300% 100%;
-    background-position: 0% 50%;
-    z-index: -2;
-    opacity: 0;
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    90deg,
+    #FF0000 0%,
+    #FF8C00 50%,
+    #00AEEF 100%
+  );
+  background-size: 300% 100%;
+  background-position: 0% 50%;
+  z-index: -2;
+  opacity: 0;
+  
+  /* Match outer radius */
+  border-radius: 8px;
 }
-.neo-button::after {
-    content: "";
-    position: absolute;
-    inset: 2px;
-    background: #000000;
-    z-index: -1;
-}
-.neo-button:hover {
-    color: #00AEEF;
-    border-color: transparent;
-}
-.neo-button:hover::before {
-    opacity: 1;
-    animation: neoButtonGradient 1.2s ease forwards;
-}
-@keyframes neoButtonGradient {
-    0% {
-        background-position: 0% 50%;
-    }
 
-    100% {
-        background-position: 100% 50%;
-    }
+.neo-button::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #000000;
+  z-index: -1;
+  
+  /* 2. Inner radius = Outer radius - border width (8px - 2px = 6px) */
+  border-radius: 6px;
+}
+
+.neo-button:hover {
+  color: #00AEEF;
+  border-color: transparent;
+}
+
+.neo-button:hover::before {
+  opacity: 1;
+  animation: neoButtonGradient 1.2s ease forwards;
+}
+
+@keyframes neoButtonGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
