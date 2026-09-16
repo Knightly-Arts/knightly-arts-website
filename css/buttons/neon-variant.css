@@ -21,3 +21,11 @@
   --text-hover: #FF007F;
   --border-color: #BF00FF;
 }
+
+/* Gold / Amber Variant */
+.btn-neon.variant-gold {
+  --glow-color-1: #FFB700;
+  --glow-color-2: #FF5500;
+  --text-hover: #FFB700;
+  --border-color: #FFB700;
+}
