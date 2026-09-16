@@ -32,28 +32,27 @@
 </header>
     
 <main>
-  <section
-    id="hero"
-    class="min-h-[90vh] flex flex-col justify-center items-center text-center px-6"
->
-    <p class="text-sm tracking-[0.4em] uppercase text-[#981A20] mb-8">
-        Creative Studio
-    </p>
-    <img
-        src="images/Knightly-Arts-Primary-Logo.svg"
-        alt="Knightly Arts primary logo"
-        class="w-32 md:w-40 h-auto mb-6"
-    >
-    <img
-        src="images/Knightly-Arts-Wordmark-Linear.svg"
-        alt="Knightly Arts"
-        class="w-80 md:w-[40rem] h-auto"
-    >
-    <p class="mt-8 max-w-2xl text-xl md:text-2xl text-gray-200 leading-relaxed">
-        by Elijah Knight
-    </p>
-    <div class="mt-10 h-px w-24 bg-[#FF0000]"></div>
+ <section id="hero" class="min-h-[85vh] max-h-[800px] py-12 flex flex-col justify-center items-center text-center px-6">
+  <!-- Reduced bottom margin so "Creative Studio" stays visible near the header -->
+  <p class="text-xs md:text-sm tracking-[0.4em] uppercase text-[#981A20] mb-4 md:mb-6">
+    Creative Studio
+  </p>
 
+  <!-- Scaled down maximum logo heights for landscape mode -->
+  <img src="images/Knightly-Arts-Primary-Logo.svg" 
+       alt="Knightly Arts primary logo" 
+       class="w-24 md:w-32 max-h-[15vh] h-auto mb-4 md:mb-6">
+
+  <img src="images/Knightly-Arts-Wordmark-Linear.svg" 
+       alt="Knightly Arts" 
+       class="w-64 sm:w-80 md:w-[32rem] lg:w-[38rem] max-h-[12vh] h-auto">
+
+  <!-- Reduced top margin and optimized text size -->
+  <p class="mt-4 md:mt-6 max-w-2xl text-lg md:text-2xl text-gray-200 leading-relaxed">
+    by Elijah Knight
+  </p>
+
+  <div class="mt-6 md:mt-8 h-px w-20 md:w-24 bg-[#FF0000]"></div>
 </section>
 <div class="h-1 w-full bg-gradient-to-r from-transparent via-[#FF0000] to-transparent"></div>
    <section id="about" class="px-4 md:px-6 py-24">
