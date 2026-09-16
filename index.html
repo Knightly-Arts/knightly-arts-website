@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knightly Arts</title>
-    <!-- Favicon -->
+ <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/Knightly-Arts-Primary-Logo.svg">
+<!-- Core CSS -->
     <link rel="stylesheet" href="css/style.css">
+<!-- Custom Buttons -->
     <link rel="stylesheet" href="css/buttons/neon-button-base.css">
     <link rel="stylesheet" href="css/buttons/neon-variants.css">
+ <!-- Custom Frames -->
+    <link rel="stylesheet" href="css/frames/frame-base.css">
+    <link rel="stylesheet" href="css/frames/frame-variant.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
     
@@ -77,20 +82,29 @@
     <div class="overflow-x-auto snap-x snap-mandatory scrollbar-hide">
         
         <div class="min-w-full snap-center px-2">
-            <div class="border border-[#30343F] p-8 md:p-12">
+           <!-- NeoTech Origins Glass & Neon Frame Container -->
+<div class="card-glass-neon variant-red rounded-xl p-8 md:p-12 relative z-10 text-left md:text-center overflow-hidden max-w-4xl mx-auto">
+  
+  <!-- Ambient Red Corner Glow Accent -->
+  <div class="absolute -top-12 -right-12 w-32 h-32 bg-[#FF0000]/15 rounded-full blur-2xl pointer-events-none"></div>
 
-           <h3 class="text-xl md:text-2xl text-white mb-4">
-        NeoTech Origins
-    </h3>
-            <p class="text-lg md:text-xl text-gray-200 leading-relaxed">
-                In the near future, the pursuit of progress drastically shifts the balance of power, raising questions of what power truly is, who should have it, and, most importantly, what to do with it.  
-            </p>
-        <div class="container inline-block mt-8">
-  <!-- NeoTech Origins Button -->
- <a href="projects/neotech-origins/" class="btn-neon mt-8">
-    <span>Explore NeoTech Origins →</span>
-</a>
-</div>
+  <!-- Heading -->
+  <h3 class="text-2xl md:text-3xl font-semibold text-white mb-4 tracking-wide group-hover:text-[#FF0000] transition duration-300">
+    NeoTech Origins
+  </h3>
+
+  <!-- Description -->
+  <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto font-light">
+    In the near future, the pursuit of progress drastically shifts the balance of power, raising questions of what power truly is, who should have it, and, most importantly, what to do with it.
+  </p>
+
+  <!-- CTA Button Container -->
+  <div class="container inline-block mt-8">
+    <a href="projects/neotech-origins/" class="btn-neon variant-red">
+      <span>Explore NeoTech Origins →</span>
+    </a>
+  </div>
+
 </div>
     </div>
   <!-- Sliders -->
