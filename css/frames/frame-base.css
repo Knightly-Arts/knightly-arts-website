@@ -1,7 +1,7 @@
 /* NeoTech Origins Project Frame - Base State */
 .project-frame {
   position: relative;
-  border-radius: 8px;
+  border-radius: 0px;
   border: 2px solid transparent;
   background: 
     linear-gradient(#000000, #000000) padding-box, 
@@ -14,7 +14,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 8px;
+  border-radius: 0px;
   background: linear-gradient(135deg, #00AEEF 0%, #006387 8%, #000000 25%, #000000 75%, #FFC42E 100%);
   transition: opacity 0.5s ease, inset 0.5s ease;
   opacity: 0;
@@ -38,7 +38,6 @@
 .project-frame:has(.btn-neon:hover) {
   background: 
     linear-gradient(#000000, #000000) padding-box, 
-    linear-gradient(
-      135deg, #00AEEF 0%, #006387 8%, #000000 25%, #000000 75%, #FFC42E 100%) border-box;
+    linear-gradient(135deg, #00AEEF 0%, #006387 8%, #000000 25%, #000000 75%, #FFC42E 100%) border-box;
 }
 
