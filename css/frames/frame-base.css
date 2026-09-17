@@ -3,6 +3,7 @@
   position: relative;
   border-radius: 0px;
   border: 2px solid transparent;
+  margin: 8px auto;
   background: 
     linear-gradient(#000000, #000000) padding-box, 
     linear-gradient(135deg, #FF0000 0%, #981A20 8%, #000000 25%, #000000 75%, #981A20 92%, #FF0000 100%) border-box;
