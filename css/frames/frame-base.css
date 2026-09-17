@@ -1,24 +1,44 @@
 /* NeoTech Origins Project Frame - Base State */
 .project-frame {
   position: relative;
-  border-radius: 8px; /* Matches the button corner rounding */
+  border-radius: 8px;
   border: 2px solid transparent;
   background: 
     linear-gradient(#000000, #000000) padding-box, 
-    linear-gradient(135deg,#FF0000 0%,#981A20 8%,#000000 25%,#000000 75%,#981A20 92%,#FF0000 100%)
-  border-box;
-  transition: background 0.5s ease, box-shadow 0.5s ease;
+    linear-gradient(135deg, #FF0000 0%, #981A20 8%, #000000 25%, #000000 75%, #981A20 92%, #FF0000 100%) border-box;
+  transition: background 0.5s ease;
 }
-
-/* Hover State - Triggers when internal button is hovered */
-.project-frame:has(.container a:hover) {
+/* Glow Pseudo-Elements */
+.project-frame:before,
+.project-frame:after {
+  content: '';
+  position: absolute;
+  inset: 0;
   border-radius: 8px;
+  background: linear-gradient(135deg, #00AEEF 0%, #006387 8%, #000000 25%, #000000 75%, #FFC42E 100%);
+  transition: opacity 0.5s ease, inset 0.5s ease;
+  opacity: 0;
+  z-index: -1;
+}
+/* Sharp background extension on hover */
+.project-frame:has(.container a:hover):before,
+.project-frame:has(.btn-neon:hover):before {
+  inset: -3px;
+  opacity: 1;
+}
+/* Blurred ambient glow on hover */
+.project-frame:has(.container a:hover):after,
+.project-frame:has(.btn-neon:hover):after {
+  inset: -6px;
+  filter: blur(12px);
+  opacity: 0.8;
+}
+/* -- Hover State for Frame Border -- */
+.project-frame:has(.container a:hover),
+.project-frame:has(.btn-neon:hover) {
   background: 
     linear-gradient(#000000, #000000) padding-box, 
-    linear-gradient(135deg,#00AEEF 0%,#006387 8%,#000000 25%,#000000 75%,#FFC42E 100%)
-  border-box;
-  box-shadow:
-    0 0 2px #FFFFFF,
-    0 0 5px #FFFFFF,
-    0 0 10px rgba(255, 255, 255, 0.7);
+    linear-gradient(
+      135deg, #00AEEF 0%, #006387 8%, #000000 25%, #000000 75%, #FFC42E 100%) border-box;
 }
+
