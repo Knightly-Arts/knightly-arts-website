@@ -13,7 +13,7 @@
   background: 
     linear-gradient(var(--frame-bg), var(--frame-bg)) padding-box, 
     linear-gradient(
-      45deg, 
+      0deg, 
       var(--frame-rest-1) 0%, 
       var(--frame-rest-2) 8%, 
       var(--frame-bg) 25%, 
@@ -31,7 +31,7 @@
   inset: 0;
   border-radius: 0px;
   background: linear-gradient(
-    45deg, 
+    0deg, 
     var(--frame-hover-1) 0%, 
     var(--frame-bg) 40%, 
     var(--frame-bg) 60%, 
@@ -60,7 +60,7 @@
   background: 
     linear-gradient(var(--frame-bg), var(--frame-bg)) padding-box, 
     linear-gradient(
-      45deg, 
+     0deg, 
       var(--frame-hover-1) 0%, 
       var(--frame-bg) 40%, 
       var(--frame-bg) 60%, 
