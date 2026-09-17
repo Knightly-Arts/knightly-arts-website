@@ -5,7 +5,7 @@
   border: 2px solid transparent;
   background: 
     linear-gradient(#000000, #000000) padding-box, 
-    linear-gradient(135deg, #FF0000 0%, #981A20 8%, #000000 40%, #000000 60%, #981A20 92%, #FF0000 100%) border-box;
+    linear-gradient(135deg, #FF0000 0%, #981A20 8%, #000000 25%, #000000 75%, #981A20 92%, #FF0000 100%) border-box;
   transition: background 0.5s ease;
 }
 /* Glow Pseudo-Elements */
