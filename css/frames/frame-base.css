@@ -12,11 +12,13 @@
 
 /* Hover State - Triggers when internal button is hovered */
 .project-frame:has(.container a:hover) {
+  border-radius: 8px;
   background: 
     linear-gradient(#000000, #000000) padding-box, 
     linear-gradient(135deg,#00AEEF 0%,#006387 8%,#000000 25%,#000000 75%,#FFC42E 100%)
   border-box;
- box-shadow:
-    0 0 4px #FFFFFF,
-    0 0 10px #FFFFFF,
-    0 0 20px rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 0 2px #FFFFFF,
+    0 0 5px #FFFFFF,
+    0 0 10px rgba(255, 255, 255, 0.7);
+}
