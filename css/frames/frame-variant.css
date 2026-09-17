@@ -1,10 +1,9 @@
+/* Cyber Variant */
 .project-frame-cyber {
   --frame-bg-rest-1: #00F0FF;
   --frame-bg-rest-2: #7000FF;
   --frame-bg-hover-1: #00FF66;
   --frame-bg-hover-2: #FFD700;
-  --frame-glow-1: rgba(0, 255, 102, 0.4);
-  --frame-glow-2: rgba(255, 215, 0, 0.25);
 }
 
 /* Variant 2: Gold Royal (Gold/Bronze resting, Crimson/Silver hover) */
@@ -13,8 +12,6 @@
   --frame-bg-rest-2: #8B6508;
   --frame-bg-hover-1: #FF0844;
   --frame-bg-hover-2: #E0E0E0;
-  --frame-glow-1: rgba(255, 8, 68, 0.4);
-  --frame-glow-2: rgba(224, 224, 224, 0.25);
 }
 
 /* Variant 3: Stealth Minimal (Subtle Gray resting, Neon Purple hover) */
@@ -23,6 +20,4 @@
   --frame-bg-rest-2: #1A1A1A;
   --frame-bg-hover-1: #A855F7;
   --frame-bg-hover-2: #EC4899;
-  --frame-glow-1: rgba(168, 85, 247, 0.4);
-  --frame-glow-2: rgba(236, 72, 153, 0.25);
 }
