@@ -4,7 +4,7 @@
   --frame-rest-2: #981A20;
   --frame-hover-1: #00AEEF;
   --frame-hover-2: #DB9A2A;
-  --frame-gray: #292929;
+  --frame-gray: #202020;
   --frame-bg: #000000;
 
   position: relative;
@@ -25,8 +25,8 @@
     45deg,
     var(--frame-rest-1) 0%,
     var(--frame-rest-2) 8%,
-    var(--frame-gray) 25%,
-    var(--frame-gray) 75%,
+    var(--frame-gray) 20%,
+    var(--frame-gray) 70%,
     var(--frame-rest-2) 92%,
     var(--frame-rest-1) 100%
   );
