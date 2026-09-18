@@ -4,10 +4,16 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+h1,h2,h3,h4,h5,h6,nav,button,a {font-family: "High Tower Text", Georgia, serif;}
 body {
     background-color: #000000;
     color: #FFFFFF;
-    font-family: "High Tower Text", Georgia, serif;
+    font-family: "Montserrat", Arial, sans-serif;
 }
 
