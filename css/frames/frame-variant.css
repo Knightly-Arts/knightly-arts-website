@@ -1,23 +1,30 @@
 /* Cyber Variant */
 .project-frame-cyber {
-  --frame-bg-rest-1: #00F0FF;
-  --frame-bg-rest-2: #7000FF;
-  --frame-bg-hover-1: #00FF66;
-  --frame-bg-hover-2: #FFD700;
+  --frame-hover-tl-1: #00F0FF; /* Cyan */
+  --frame-hover-tl-2: #0080FF; /* Blue */
+  --frame-hover-br-1: #C000FF; /* Purple */
+  --frame-hover-br-2: #FF007F; /* Magenta */
+}
+/* Gold Royal (Gold/Bronze hover accents) */
+.project-frame--gold {
+  --frame-hover-tl-1: #FFD700; /* Bright Gold */
+  --frame-hover-tl-2: #B8860B; /* Dark Goldenrod */
+  --frame-hover-br-1: #8B5A2B; /* Deep Bronze */
+  --frame-hover-br-2: #CD7F32; /* Bronze */
 }
 
-/* Variant 2: Gold Royal (Gold/Bronze resting, Crimson/Silver hover) */
-.project-frame-gold {
-  --frame-bg-rest-1: #FFD700;
-  --frame-bg-rest-2: #8B6508;
-  --frame-bg-hover-1: #FF0844;
-  --frame-bg-hover-2: #E0E0E0;
+/* Stealth Minimal (Clean White/Silver hover accents) */
+.project-frame--stealth {
+  --frame-hover-tl-1: #FFFFFF; /* Pure White */
+  --frame-hover-tl-2: #C0C0C0; /* Silver */
+  --frame-hover-br-1: #708090; /* Slate Gray */
+  --frame-hover-br-2: #E0E0E0; /* Platinum */
 }
 
-/* Variant 3: Stealth Minimal (Subtle Gray resting, Neon Purple hover) */
-.project-frame-stealth {
-  --frame-bg-rest-1: #4A4A4A;
-  --frame-bg-rest-2: #1A1A1A;
-  --frame-bg-hover-1: #A855F7;
-  --frame-bg-hover-2: #EC4899;
+/* Emerald Green (Cyber Toxic/Neon Green hover accents) */
+.project-frame--emerald {
+  --frame-hover-tl-1: #00FF87; /* Bright Neon Mint */
+  --frame-hover-tl-2: #00A86B; /* Deep Emerald */
+  --frame-hover-br-1: #006400; /* Dark Green */
+  --frame-hover-br-2: #39FF14; /* Electric Lime */
 }
