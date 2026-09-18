@@ -11,7 +11,7 @@
   --frame-hover-br-1: #99701A; /* Bottom-Right Inner */
   --frame-hover-br-2: #DB9A2A; /* Bottom-Right Outer */
   /* Frame Outline and Background */
-  --frame-gray: #30343F;
+  --frame-gray: #202020;
   --frame-bg: #000000;
 
   position: relative;
@@ -27,13 +27,13 @@
   position: absolute;
   inset: 0;
   padding: 2px; /* Border Thickness */
-
+/* Frame at Rest */
   background: linear-gradient(
     45deg,
     var(--frame-rest-tl-1) 0%,
     var(--frame-rest-tl-2) 8%,
-    var(--frame-gray) 25%,
-    var(--frame-gray) 75%,
+    var(--frame-gray) 20%,
+    var(--frame-gray) 80%,
     var(--frame-rest-br-1) 92%,
     var(--frame-rest-br-2) 100%);
 
@@ -45,7 +45,7 @@
   z-index: 5;
   transition: background 0.5s ease;
 }
-/* Ambient Outer Glow */
+/* Outer Glow on Hover */
 .project-frame::after {
   content: '';
   position: absolute;
@@ -67,7 +67,7 @@
   z-index: -1;
   transition: opacity 0.5s ease, inset 0.5s ease;
 }
-
+/* Frame on Hover */
 .project-frame:has(.container a:hover)::before,
 .project-frame:has(.btn-neon:hover)::before {
   background: linear-gradient(
