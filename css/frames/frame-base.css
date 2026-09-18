@@ -1,10 +1,17 @@
 /* NeoTech Origins Project Frame - Base State */
 .project-frame {
-  --frame-rest-1: #FF0000;
-  --frame-rest-2: #981A20;
-  --frame-hover-1: #00AEEF;
-  --frame-hover-2: #DB9A2A;
-  --frame-gray: #202020;
+  /* Rest State Colors */
+  --frame-rest-tl-1: #FF0000;
+  --frame-rest-tl-2: #981A20;
+  --frame-rest-br-1: #981A20;
+  --frame-rest-br-2: #FF0000;
+  /* Hover State Colors (4 selectable variables) */
+  --frame-hover-tl-1: #00AEEF; /* Top-Left Outer */
+  --frame-hover-tl-2: #006387; /* Top-Left Inner */
+  --frame-hover-br-1: #99701A; /* Bottom-Right Inner */
+  --frame-hover-br-2: #DB9A2A; /* Bottom-Right Outer */
+  /* Frame Outline and Background */
+  --frame-gray: #30343F;
   --frame-bg: #000000;
 
   position: relative;
@@ -19,17 +26,16 @@
   content: '';
   position: absolute;
   inset: 0;
-  padding: 2px; /* Controls border thickness */
+  padding: 2px; /* Border Thickness */
 
   background: linear-gradient(
     45deg,
-    var(--frame-rest-1) 0%,
-    var(--frame-rest-2) 8%,
-    var(--frame-gray) 20%,
-    var(--frame-gray) 70%,
-    var(--frame-rest-2) 92%,
-    var(--frame-rest-1) 100%
-  );
+    var(--frame-rest-tl-1) 0%,
+    var(--frame-rest-tl-2) 8%,
+    var(--frame-gray) 25%,
+    var(--frame-gray) 75%,
+    var(--frame-rest-br-1) 92%,
+    var(--frame-rest-br-2) 100%);
 
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -39,7 +45,6 @@
   z-index: 5;
   transition: background 0.5s ease;
 }
-
 /* Ambient Outer Glow */
 .project-frame::after {
   content: '';
@@ -49,11 +54,12 @@
 
   background: linear-gradient(
     45deg,
-    var(--frame-hover-1) 0%,
-    var(--frame-bg) 35%,
-    var(--frame-bg) 65%,
-    var(--frame-hover-2) 100%
-  );
+    var(--frame-hover-tl-1) 0%,
+    var(--frame-hover-tl-2) 15%,
+    var(--frame-bg) 40%,
+    var(--frame-bg) 60%,
+    var(--frame-hover-br-1) 85%,
+    var(--frame-hover-br-2) 100%);
 
   filter: blur(12px);
   opacity: 0;
@@ -62,22 +68,21 @@
   transition: opacity 0.5s ease, inset 0.5s ease;
 }
 
-/* Hover State - Changes border & triggers glow */
 .project-frame:has(.container a:hover)::before,
 .project-frame:has(.btn-neon:hover)::before {
   background: linear-gradient(
     45deg,
-    var(--frame-hover-1) 0%,
-    var(--frame-bg) 22%,
-    var(--frame-gray) 35%,
-    var(--frame-gray) 65%,
-    var(--frame-bg) 78%,
-    var(--frame-hover-2) 100%
-  );
+    var(--frame-hover-tl-1) 0%,
+    var(--frame-hover-tl-2) 8%,
+    var(--frame-gray) 40%,
+    var(--frame-gray) 60%,
+    var(--frame-hover-br-1) 92%,
+    var(--frame-hover-br-2) 100%);
 }
-
+/* Hover Glow Trigger */
 .project-frame:has(.container a:hover)::after,
 .project-frame:has(.btn-neon:hover)::after {
   inset: -6px;
   opacity: 0.8;
 }
+
