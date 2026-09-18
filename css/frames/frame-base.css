@@ -4,66 +4,80 @@
   --frame-rest-2: #981A20;
   --frame-hover-1: #00AEEF;
   --frame-hover-2: #DB9A2A;
+  --frame-gray: #30343F;
   --frame-bg: #000000;
 
   position: relative;
   border-radius: 0px;
-  border: 2px solid transparent;
   margin: 6px auto;
-  background: 
-    linear-gradient(var(--frame-bg), var(--frame-bg)) padding-box, 
-    linear-gradient(
-      45deg, 
-      var(--frame-rest-1) 0%, 
-      var(--frame-rest-2) 8%, 
-      var(--frame-bg) 25%, 
-      var(--frame-bg) 75%, 
-      var(--frame-rest-2) 92%, 
-      var(--frame-rest-1) 100%
-    ) border-box;
+  background: var(--frame-bg);
   transition: background 0.5s ease;
 }
-/* Glow Pseudo-Elements */
-.project-frame:before,
-.project-frame:after {
+
+/* Complete Enclosed Frame (Border + Gray Extension) */
+.project-frame::before {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 0px;
+  padding: 2px; /* Controls border thickness */
+
   background: linear-gradient(
-    45deg, 
-    var(--frame-hover-1) 0%, 
-    var(--frame-bg) 40%, 
-    var(--frame-bg) 60%, 
+    45deg,
+    var(--frame-rest-1) 0%,
+    var(--frame-rest-2) 8%,
+    var(--frame-gray) 22%,
+    var(--frame-gray) 78%,
+    var(--frame-rest-2) 92%,
+    var(--frame-rest-1) 100%
+  );
+
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+  z-index: 5;
+  transition: background 0.5s ease;
+}
+
+/* Ambient Outer Glow */
+.project-frame::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 0px;
+
+  background: linear-gradient(
+    45deg,
+    var(--frame-hover-1) 0%,
+    var(--frame-bg) 35%,
+    var(--frame-bg) 65%,
     var(--frame-hover-2) 100%
   );
-  transition: opacity 0.5s ease, inset 0.5s ease;
-  opacity: 0;
-  z-index: -1;
-}
-/* Sharp background extension on hover */
-.project-frame:has(.container a:hover):before,
-.project-frame:has(.btn-neon:hover):before {
-  inset: -3px;
-  opacity: 1;
-}
-/* Blurred ambient glow on hover */
-.project-frame:has(.container a:hover):after,
-.project-frame:has(.btn-neon:hover):after {
-  inset: -6px;
+
   filter: blur(12px);
-  opacity: 0.8;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.5s ease, inset 0.5s ease;
 }
-/* Hover State for Frame Border */
-.project-frame:has(.container a:hover),
-.project-frame:has(.btn-neon:hover) {
-  background: 
-    linear-gradient(var(--frame-bg), var(--frame-bg)) padding-box, 
-    linear-gradient(
-     45deg, 
-      var(--frame-hover-1) 0%, 
-      var(--frame-bg) 40%, 
-      var(--frame-bg) 60%, 
-      var(--frame-hover-2) 100%
-    ) border-box;
+
+/* Hover State - Changes border & triggers glow */
+.project-frame:has(.container a:hover)::before,
+.project-frame:has(.btn-neon:hover)::before {
+  background: linear-gradient(
+    45deg,
+    var(--frame-hover-1) 0%,
+    var(--frame-bg) 22%,
+    var(--frame-gray) 35%,
+    var(--frame-gray) 65%,
+    var(--frame-bg) 78%,
+    var(--frame-hover-2) 100%
+  );
+}
+
+.project-frame:has(.container a:hover)::after,
+.project-frame:has(.btn-neon:hover)::after {
+  inset: -6px;
+  opacity: 0.8;
 }
