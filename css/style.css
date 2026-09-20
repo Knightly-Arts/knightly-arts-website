@@ -16,4 +16,20 @@ body {
     color: #FFFFFF;
     font-family: "Crimson Pro", Times New Roman, serif;
 }
-
+.social-btn {
+    display: inline-flex;
+    padding: 1rem 2rem;
+    border: 1px solid #30343F;
+    color: #D1D5DB;
+    clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
+    transition: 0.3s ease;
+}
+.social-btn-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.social-btn:hover {
+    color: #FF0000;
+    border-color: #FF0000;
+}
