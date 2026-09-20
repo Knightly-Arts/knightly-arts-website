@@ -1,19 +1,21 @@
-/* Knightly Arts Static Social Button */
+/* Knightly Arts Static Social Button with Red Hover Glow */
 .btn-social {
   /* Rest State - Knightly Arts Palette */
   --ka-rest-tl-1: #981A20; /* Dark Red Corner */
-  --ka-rest-tl-2: #30343F; /* Charcoal Gray Accent */
-  --ka-rest-br-1: #30343F;
+  --ka-rest-tl-2: #292929; /* Charcoal Gray Accent */
+  --ka-rest-br-1: #292929;
   --ka-rest-br-2: #981A20;
 
   /* Hover State - Bright Crimson & Pure White Accent */
   --ka-hover-tl-1: #FF0000; /* Bright Red */
   --ka-hover-tl-2: #FFFFFF; /* High-contrast White highlight */
-  --ka-hover-br-1: #981A20; /* Dark Red */
+  --ka-hover-br-1: #FFFFFF; /* Dark Red */
   --ka-hover-br-2: #FF0000;
 
+  --ka-red-bright: #FF0000;
+  --ka-red-dark: #981A20;
   --ka-gray-border: #30343F;
-  --ka-gray-muted: #80889B;
+  --ka-gray-muted: #929292;
   --ka-bg: #000000;
   --ka-white: #FFFFFF;
 
@@ -58,6 +60,26 @@
   transition: background 0.4s ease;
 }
 
+/* 2. Red Ambient Outer Glow (Hidden at rest, fades in on hover) */
+.btn-social::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+
+  background: linear-gradient(
+    135deg,
+    var(--ka-red-bright) 0%,
+    var(--ka-red-dark) 50%,
+    var(--ka-red-bright) 100%
+  );
+
+  filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.4s ease, inset 0.4s ease;
+}
+
 /* SVG Icon & Handle Text */
 .btn-social-icon {
   width: 1.25rem;
@@ -70,10 +92,10 @@
   font-family: inherit;
 }
 
-/* Hover State - Swaps border gradient corners & lifts button */
+/* Hover State - Swaps border corners, triggers red glow, and lifts button */
 .btn-social:hover {
   color: var(--ka-white);
-  transform: translateY(-2px); /* Kept button lift */
+  transform: translateY(-2px);
 }
 
 .btn-social:hover::before {
@@ -86,6 +108,11 @@
     var(--ka-hover-br-1) 88%,
     var(--ka-hover-br-2) 100%
   );
+}
+
+.btn-social:hover::after {
+  inset: -4px;
+  opacity: 0.7; /* Red glow intensity on hover */
 }
 
 .btn-social:hover .btn-social-icon {
