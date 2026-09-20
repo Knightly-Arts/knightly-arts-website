@@ -67,7 +67,7 @@
   width: 1.25rem;
   height: 1.25rem;
   stroke: var(--insta-pink);
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: stroke 0.3s ease;
 }
 
 /* Hover States */
@@ -77,12 +77,12 @@
 }
 
 .btn-insta:hover::after {
-  inset: -4px;
-  opacity: 0.95; /* Intense neon burst on hover */
-  filter: blur(14px);
+  inset: -3px;
+  opacity: 0.75;
+  filter: blur(10px);
 }
 
 .btn-insta:hover .btn-insta-icon {
   stroke: #FFFFFF;
-  transform: scale(1.15) rotate(-5deg);
 }
+
