@@ -1,5 +1,18 @@
 /* Project Frame - Social Button Modifier (.project-frame--btn) */
 .project-frame--btn {
+  --social-rest-tl-1: #FF0000;
+  --social-rest-tl-2: #981A20;
+  --social-rest-br-1: #981A20;
+  --social-rest-br-2: #FF0000;
+
+  --social-hover-tl-1: #FF0000;
+  --social-hover-tl-2: #FFFFFF;
+  --social-hover-br-1: #981A20;
+  --social-hover-br-2: #FF0000;
+
+  --social-gray: #202020;
+  --social-bg: #000000;
+  
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -24,10 +37,10 @@
   background: linear-gradient(
     45deg,
     var(--frame-hover-tl-1) 0%,
-    var(--frame-hover-tl-2) 8%,
+    var(--frame-hover-tl-2) 15%,
     var(--frame-gray) 40%,
     var(--frame-gray) 60%,
-    var(--frame-hover-br-1) 92%,
+    var(--frame-hover-br-1) 85%,
     var(--frame-hover-br-2) 100%
   );
 }
