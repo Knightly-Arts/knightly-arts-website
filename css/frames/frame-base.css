@@ -97,6 +97,9 @@
   width: auto;
   text-decoration: none;
   cursor: pointer;
+  background-color: var(--frame-bg, #000000); 
+  position: relative;
+  z-index: 1;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 /* Elevates button slightly on hover */
