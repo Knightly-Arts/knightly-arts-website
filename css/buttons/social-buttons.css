@@ -1,0 +1,38 @@
+/* Project Frame - Social Button Modifier (.project-frame--btn) */
+.project-frame--btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  width: auto;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* Solid background */
+  background-color: var(--frame-bg, #000000);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+/* Button Hover State & Lift */
+.project-frame--btn:hover {
+  transform: translateY(-2px);
+}
+/* Border Gradient Change on Button Hover */
+.project-frame--btn:hover::before {
+  background: linear-gradient(
+    45deg,
+    var(--frame-hover-tl-1) 0%,
+    var(--frame-hover-tl-2) 8%,
+    var(--frame-gray) 40%,
+    var(--frame-gray) 60%,
+    var(--frame-hover-br-1) 92%,
+    var(--frame-hover-br-2) 100%
+  );
+}
+/* Outer Glow Expansion on Button Hover */
+.project-frame--btn:hover::after {
+  inset: -6px;
+  opacity: 0.8;
+}
