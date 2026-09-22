@@ -1,25 +1,20 @@
 .project-social {
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-
   padding: 0.75rem 1.5rem;
   position: relative;
+  z-index: 1;
   width: auto;
   margin: 0;
 
   background: #000000;
   color: #D1D5DB;
-
   text-decoration: none;
   cursor: pointer;
   border: none;
-
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 /* Frame */
 .project-social::before {
@@ -27,7 +22,6 @@
   position: absolute;
   inset: 0;
   padding: 2px;
-
   background: linear-gradient(
     45deg,
     #FF0000 0%,
@@ -37,34 +31,19 @@
     #981A20 85%,
     #FF0000 100%
   );
-
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-
   pointer-events: none;
+  z-index: 2;
+  transition: background 0.3s ease;
 }
-/* Hover frame */
-.project-social:hover::before {
-  background: linear-gradient(
-    45deg,
-    #FF0000 0%,
-    #FFFFFF 18%,
-    #30343F 40%,
-    #30343F 60%,
-    #981A20 82%,
-    #FF0000 100%
-  );
-}
+
 /* Outside glow */
 .project-social::after {
   content: '';
   position: absolute;
   inset: -3px;
-
   background: linear-gradient(
     45deg,
     #FF0000 0%,
@@ -74,11 +53,9 @@
     #981A20 80%,
     #FF0000 100%
   );
-
   filter: blur(10px);
   opacity: 0;
   z-index: -1;
-
   transition: opacity 0.3s ease, inset 0.3s ease;
 }
 
