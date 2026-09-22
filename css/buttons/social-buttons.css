@@ -6,7 +6,11 @@
   height: 52px;
   transition: transform 0.3s ease;
 }
-/* Hover border + glow layers */
+
+.social-container:hover {
+  transform: translateY(-2px) scale(1.015);
+}
+
 .social-container::before,
 .social-container::after {
   content: '';
@@ -14,30 +18,30 @@
   inset: 0;
   background: linear-gradient(
     45deg,
-    #FF0000,
+    #00AEEF,
     #000000,
     #000000,
     #FFB700
   );
   opacity: 0;
   transition: 0.5s ease;
+  pointer-events: none;
 }
-/* Sharp border expansion */
+
 .social-container:hover::before {
   inset: -3px;
   opacity: 1;
 }
-/* Soft outer glow */
+
 .social-container:hover::after {
   inset: -3px;
   filter: blur(12px);
   opacity: 0.7;
 }
-/* Button */
+
 .btn-social {
   position: relative;
   z-index: 10;
-
   height: 100%;
   padding: 0 1.5rem;
 
@@ -60,11 +64,8 @@
     color 0.3s ease,
     border-color 0.3s ease;
 }
-/* Hover state */
-.social-container:hover {
-  transform: translateY(-2px) scale(1.01);
-}
-.btn-social {
-  color: #FF0000;
+
+.social-container:hover .btn-social {
+  color: #00AEEF;
   border-color: transparent;
 }
