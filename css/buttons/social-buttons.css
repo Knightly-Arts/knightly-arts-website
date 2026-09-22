@@ -1,86 +1,61 @@
-/* Knightly Arts - Social Media Button Frame */
-.project-social {
+/* Knightly Arts Social Media Buttons */
+/* 1. Black Background Wrapper (Cut corners & Stacking context) */
+.social-container {
+  display: inline-block;
+  background: #000000;
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  padding: 2px; /* Border thickness */
+  position: relative;
+  z-index: 10;
+}
+/* 2. Main Button Body */
+.btn-social {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.75rem;
+  background: #000000;
+  color: #D1D5DB; /* Base text color (gray-300) */
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
   position: relative;
   z-index: 2;
-
-  /* Solid Rectangular Black Base */
-  background-color: #000000 !important;
-  color: #D1D5DB;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 0px; /* Sharp rectangle corners */
-
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
-/* 1. Masked 2px Border Frame */
-.project-social::before {
+/* 3. Gradient Border Line */
+.social-container::before {
   content: '';
   position: absolute;
   inset: 0;
-  padding: 2px;
-  background: linear-gradient(
-    45deg,
-    #FF0000 0%,
-    #981A20 15%,
-    #30343F 35%,
-    #30343F 65%,
-    #981A20 85%,
-    #FF0000 100%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: 3;
+  background: linear-gradient(90deg, #FF0000, #981A20, #30343F);
+  z-index: 1;
   transition: background 0.3s ease;
 }
-
-/* 2. Outer Glow Layer (Positioned behind the wrapper container) */
-.project-social::after {
+/* 4. Outer Glow Layer */
+.social-container::after {
   content: '';
   position: absolute;
-  inset: -3px;
-  background: linear-gradient(
-    45deg,
-    #FF0000 0%,
-    #981A20 20%,
-    #30343F 40%,
-    #30343F 60%,
-    #981A20 80%,
-    #FF0000 100%
-  );
+  inset: -4px;
+  background: linear-gradient(90deg, #FF0000, #981A20);
   filter: blur(8px);
   opacity: 0;
   z-index: -1;
   transition: opacity 0.3s ease, inset 0.3s ease;
 }
-
-/* Hover States */
-.project-social:hover {
+/* Button Lift & Text Color Change */
+.btn-social:hover {
   transform: translateY(-2px);
-  color: #FF0000 !important;           /* Red text & icon on hover */
-  background-color: #000000 !important; /* Pure solid black interior */
+  color: #FF0000; /* Text & SVG icon hover color */
 }
-
-.project-social:hover::before {
-  background: linear-gradient(
-    45deg,
-    #FF0000 0%,
-    #FF0000 18%,
-    #30343F 40%,
-    #30343F 60%,
-    #981A20 82%,
-    #FF0000 100%
-  );
+/* Border Gradient Change on Hover */
+.social-container:has(.btn-social:hover)::before {
+  background: linear-gradient(90deg, #FF0000, #FFFFFF, #981A20);
 }
-
-.project-social:hover::after {
-  inset: -5px;
+/* Outer Glow on Hover */
+.social-container:has(.btn-social:hover)::after {
+  inset: -6px;
   opacity: 0.8;
 }
