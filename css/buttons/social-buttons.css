@@ -1,65 +1,70 @@
-/* Knightly Arts - Dedicated Social Media Button */
-/* 1. Black Background Wrapper (Square corners & Stacking context) */
+/* Knightly Arts - Social Media Button */
 .social-container {
   display: inline-block;
-  background: #000000;
-  padding: 2px; /* Border thickness */
+  position: relative;
+  width: auto;
+  height: 52px;
+  transition: transform 0.3s ease;
+}
+/* Hover border + glow layers */
+.social-container::before,
+.social-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    #FF0000,
+    #000000,
+    #000000,
+    #FFB700
+  );
+  opacity: 0;
+  transition: 0.5s ease;
+}
+/* Sharp border expansion */
+.social-container:hover::before {
+  inset: -3px;
+  opacity: 1;
+}
+/* Soft outer glow */
+.social-container:hover::after {
+  inset: -3px;
+  filter: blur(12px);
+  opacity: 0.7;
+}
+/* Button */
+.btn-social {
   position: relative;
   z-index: 10;
-  border-radius: 0px; 
-}
-/* 2. Main Button Body */
-.btn-social {
+
+  height: 100%;
+  padding: 0 1.5rem;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 0.75rem 1.75rem;
+
   background: #000000;
-  color: #D1D5DB; /* Base text color (gray-300) */
+  border: 1px solid #FF0000;
+
+  color: #FFFFFF;
   text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.025em;
-  border-radius: 0px; 
-  position: relative;
-  z-index: 2;
-  transition: transform 0.3s ease, color 0.3s ease;
+
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
-/* 3. Gradient Border Line */
-.social-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #FF0000, #981A20, #30343F);
-  z-index: 1;
-  transition: background 0.3s ease;
-}
-/* 4. Outer Glow Layer */
-.social-container::after {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  background: linear-gradient(90deg, #FF0000, #981A20);
-  filter: blur(8px);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.3s ease, inset 0.3s ease;
-}
-/* Button Lift & Text Color Change */
+/* Hover state */
 .social-container:hover {
-  transform: translateY(-2px);
-  transition: transform 0.3s ease;
-  scale: 1.015;
+  transform: translateY(-2px) scale(1.01);
 }
-.btn-social:hover { /* Text & SVG icon hover color and scale */
+.btn-social {
   color: #FF0000;
-}
-/* Border Gradient Change on Hover */
-.social-container:has(.btn-social:hover)::before {
-  background: linear-gradient(90deg, #FF0000, #FFFFFF, #981A20);
-}
-/* Outer Glow on Hover */
-.social-container:has(.btn-social:hover)::after {
-  inset: -6px;
-  opacity: 0.8;
+  border-color: transparent;
 }
