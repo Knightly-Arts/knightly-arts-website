@@ -1,12 +1,12 @@
-/* Knightly Arts Social Media Buttons */
-/* 1. Black Background Wrapper (Cut corners & Stacking context) */
+/* Knightly Arts - Dedicated Social Media Button */
+/* 1. Black Background Wrapper (Square corners & Stacking context) */
 .social-container {
   display: inline-block;
   background: #000000;
-  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
   padding: 2px; /* Border thickness */
   position: relative;
   z-index: 10;
+  border-radius: 0px; 
 }
 /* 2. Main Button Body */
 .btn-social {
@@ -20,7 +20,7 @@
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.025em;
-  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  border-radius: 0px; 
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease, color 0.3s ease;
