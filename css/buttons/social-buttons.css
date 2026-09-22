@@ -63,14 +63,14 @@
 /* Hover States */
 .project-social:hover {
   transform: translateY(-2px);
-  color: #FFFFFF;
-  background-color: #000000; 
+  color: #FF0000 !important;       /* Changes text and SVG icon color to red */
+  background-color: #000000 !important; /* Keeps interior solid black */
 }
 .project-social:hover::before {
   background: linear-gradient(
     45deg,
     #FF0000 0%,
-    #FFFFFF 18%,
+    #FF0000 18%,
     #30343F 40%,
     #30343F 60%,
     #981A20 82%,
@@ -78,6 +78,6 @@
   );
 }
 .project-social:hover::after {
-  inset: -5px; /* outward glow on hover */
+  inset: -5px; /* Outward red glow on hover */
   opacity: 0.75;
 }
