@@ -1,6 +1,4 @@
 .project-social {
-  --social-bg: #000000;
-  --social-gray: #30343F;
 
   display: inline-flex;
   align-items: center;
@@ -12,7 +10,7 @@
   width: auto;
   margin: 0;
 
-  background: var(--social-bg);
+  background: #000000;
   color: #D1D5DB;
 
   text-decoration: none;
