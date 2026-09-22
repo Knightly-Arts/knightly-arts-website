@@ -6,15 +6,15 @@
   gap: 0.75rem;
   padding: 0.75rem 1.5rem;
   position: relative;
-  z-index: 1; /* Stacks button background above the rear glow layer */
-  width: auto;
-  margin: 0;
+  z-index: 2;
 
-  background-color: #000000; /* Solid interior blocks inner glow bleed */
+  /* Solid Rectangular Black Base */
+  background-color: #000000 !important;
   color: #D1D5DB;
   text-decoration: none;
   cursor: pointer;
-  border: none;
+  border-radius: 0px; /* Sharp rectangle corners */
+
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -37,15 +37,15 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
   transition: background 0.3s ease;
 }
 
-/* 2. Outer Glow Layer (Behind the button) */
+/* 2. Outer Glow Layer (Positioned behind the wrapper container) */
 .project-social::after {
   content: '';
   position: absolute;
-  inset: -3px; /* Extends outside the 2px border */
+  inset: -3px;
   background: linear-gradient(
     45deg,
     #FF0000 0%,
@@ -55,17 +55,19 @@
     #981A20 80%,
     #FF0000 100%
   );
-  filter: blur(10px);
+  filter: blur(8px);
   opacity: 0;
-  z-index: -1; 
+  z-index: -1;
   transition: opacity 0.3s ease, inset 0.3s ease;
 }
+
 /* Hover States */
 .project-social:hover {
   transform: translateY(-2px);
-  color: #FF0000 !important;       /* Changes text and SVG icon color to red */
-  background-color: #000000 !important; /* Keeps interior solid black */
+  color: #FF0000 !important;           /* Red text & icon on hover */
+  background-color: #000000 !important; /* Pure solid black interior */
 }
+
 .project-social:hover::before {
   background: linear-gradient(
     45deg,
@@ -77,7 +79,8 @@
     #FF0000 100%
   );
 }
+
 .project-social:hover::after {
-  inset: -5px; /* Outward red glow on hover */
-  opacity: 0.75;
+  inset: -5px;
+  opacity: 0.8;
 }
