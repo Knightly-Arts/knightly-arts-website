@@ -1,3 +1,4 @@
+/* Knightly Arts - Social Media Button Frame */
 .project-social {
   display: inline-flex;
   align-items: center;
@@ -5,18 +6,19 @@
   gap: 0.75rem;
   padding: 0.75rem 1.5rem;
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Stacks button background above the rear glow layer */
   width: auto;
   margin: 0;
 
-  background: #000000;
+  background-color: #000000; /* Solid interior blocks inner glow bleed */
   color: #D1D5DB;
   text-decoration: none;
   cursor: pointer;
   border: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-/* Frame */
+
+/* 1. Masked 2px Border Frame */
 .project-social::before {
   content: '';
   position: absolute;
@@ -39,11 +41,11 @@
   transition: background 0.3s ease;
 }
 
-/* Outside glow */
+/* 2. Outer Glow Layer (Behind the button) */
 .project-social::after {
   content: '';
   position: absolute;
-  inset: -3px;
+  inset: -3px; /* Extends outside the 2px border */
   background: linear-gradient(
     45deg,
     #FF0000 0%,
@@ -55,17 +57,30 @@
   );
   filter: blur(10px);
   opacity: 0;
-  z-index: -1;
+  z-index: -1; /* Sits directly behind the solid black button background */
   transition: opacity 0.3s ease, inset 0.3s ease;
 }
 
-.project-social:hover::after {
-  inset: -5px;
-  opacity: 0.7;
-}
-/* Hover lift */
+/* Hover States */
 .project-social:hover {
   transform: translateY(-2px);
   color: #FFFFFF;
+}
+
+.project-social:hover::before {
+  background: linear-gradient(
+    45deg,
+    #FF0000 0%,
+    #FFFFFF 18%,
+    #30343F 40%,
+    #30343F 60%,
+    #981A20 82%,
+    #FF0000 100%
+  );
+}
+
+.project-social:hover::after {
+  inset: -5px; /* Expands glow outwards on hover */
+  opacity: 0.75;
 }
 
