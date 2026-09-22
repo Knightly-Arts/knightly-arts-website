@@ -49,10 +49,10 @@
 .social-container:hover {
   transform: translateY(-2px);
   transition: transform 0.3s ease;
+  scale: 1.015;
 }
 .btn-social:hover { /* Text & SVG icon hover color and scale */
   color: #FF0000;
-  scale: 1.05;
 }
 /* Border Gradient Change on Hover */
 .social-container:has(.btn-social:hover)::before {
