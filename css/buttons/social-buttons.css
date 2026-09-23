@@ -16,7 +16,7 @@
 .social-container::before {
   content: '';
   position: absolute;
-  inset: 0; /* Provides base border thickness (2px offset around button) */
+  inset: -1px; /* Provides base border thickness (2px offset around button) */
   background: linear-gradient(
     45deg,
     #FF0000 0%,
