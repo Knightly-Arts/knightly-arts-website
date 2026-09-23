@@ -37,13 +37,12 @@
 .social-container:hover::before {
   background: linear-gradient(
     45deg,
-    #000000 0%,
+    #FFFFFF 0%,
     #FF0000 8%,
     #929292 25%,
-    #000000 50%,
     #929292 75%,
     #FF0000 92%,
-    #000000 100%
+    #FFFFFF 100%
   );
 }
 /* 2. Outer Glow Layer */
@@ -53,13 +52,12 @@
   inset: -2px;
   background: linear-gradient(
     45deg,
-    #000000 0%,
+    #FFFFFF 0%,
     #FF0000 8%,
     #929292 25%,
-    #000000 50%,
     #929292 75%,
     #FF0000 92%,
-    #000000 100%
+    #FFFFFF 100%
   );
   filter: blur(12px);
   opacity: 0;
