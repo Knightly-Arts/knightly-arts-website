@@ -1,4 +1,4 @@
-/* Knightly Arts - Social Media Button */
+/* Knightly Arts - Social Media Button Frame */
 .social-container {
   display: inline-block;
   position: relative;
@@ -7,91 +7,92 @@
   transition: transform 0.3s ease;
 }
 
+/* Container translation + scale on hover */
 .social-container:hover {
   transform: translateY(-2px) scale(1.015);
 }
 
+/* 1. Border Gradient Layer (At Rest) */
 .social-container::before {
   content: '';
   position: absolute;
-  inset: 0;
-
+  inset: 0; /* Provides base border thickness (2px offset around button) */
   background: linear-gradient(
     45deg,
     #FF0000 0%,
-    #981A20 8%,
-    #000000 20%,
-    #000000 80%,
-    #981A20 92%,
+    #981A20 15%,
+    #30343F 35%,
+    #30343F 65%,
+    #981A20 85%,
     #FF0000 100%
   );
-
   opacity: 1;
   pointer-events: none;
-  transition: 0.5s ease;
+  transition: opacity 0.3s ease, inset 0.3s ease;
 }
+
+/* 2. Outer Glow Layer */
 .social-container::after {
   content: '';
   position: absolute;
-  inset: -3px;
-
+  inset: -2px;
   background: linear-gradient(
     45deg,
-    #FFFFFF 0%,
-    #FF0000 15%,
-    #000000 30%,
-    #000000 70%,
-    #FF0000 85%,
-    #FFFFFF 100%
+    #FF0000 0%,
+    #981A20 25%,
+    #30343F 50%,
+    #981A20 75%,
+    #FF0000 100%
   );
-
-  filter: blur(12px);
+  filter: blur(14px);
   opacity: 0;
   pointer-events: none;
   z-index: -1;
-
-  transition: 0.5s ease;
-}
-.social-container:hover::before {
-  inset: -3px;
-  opacity: 1;
+  transition: opacity 0.3s ease, inset 0.3s ease;
 }
 
-.social-container:hover::after {
-  inset: -3px;
-  filter: blur(12px);
-  opacity: 0.7;
-}
-
+/* Inner Button Base */
 .btn-social {
   position: relative;
   z-index: 10;
   height: 100%;
   padding: 0 1.5rem;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
 
-  background: #000000;
-  border: 1px solid #FF0000;
+  background: #000000; /* Solid interior covers the center of the gradient layer */
+  border: none;       /* Border is supplied by ::before layer */
 
   color: #FFFFFF;
   text-decoration: none;
-
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
-  transition:
-    color 0.3s ease,
-    border-color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
+/* ==========================================================================
+   Hover States
+   ========================================================================== */
+
+/* Thinner Border on Hover (reduces border spread) */
+.social-container:hover::before {
+  inset: 1px;
+  opacity: 0.85;
+}
+
+/* Prominent Outer Glow Bloom on Hover */
+.social-container:hover::after {
+  inset: -6px; /* Expands glow area outwards */
+  filter: blur(16px);
+  opacity: 0.95; /* High visibility red glow */
+}
+
+/* Icon & Text Color Change on Hover */
 .social-container:hover .btn-social {
   color: #FF0000;
-  border-color: transparent;
 }
-
 
