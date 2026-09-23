@@ -4,6 +4,8 @@
   position: relative;
   width: auto;
   height: 52px;
+  padding: 2px;
+  background: #000000;
   transition: transform 0.3s ease;
 }
 
@@ -16,7 +18,7 @@
 .social-container::before {
   content: '';
   position: absolute;
-  inset: 1px; /* Provides base border thickness (2px offset around button) */
+  inset: 0; /* Provides base border thickness (2px offset around button) */
   background: linear-gradient(
     45deg,
     #FF0000 0%,
@@ -28,6 +30,7 @@
   );
   opacity: 1;
   pointer-events: none;
+  z-index: 1;
   transition: opacity 0.3s ease, inset 0.3s ease;
 }
 
@@ -78,21 +81,19 @@
    Hover States
    ========================================================================== */
 
-/* Thinner Border on Hover (reduces border spread) */
-.social-container:hover::before {
-  inset: 1px;
-  opacity: 0.85;
+/* Thinner Border on Hover */
+.social-container:hover {
+  padding: 1px; /* Shrinks border width to 1px on hover */
 }
 
 /* Prominent Outer Glow Bloom on Hover */
 .social-container:hover::after {
-  inset: -6px; /* Expands glow area outwards */
+  inset: -6px;
   filter: blur(16px);
-  opacity: 0.95; /* High visibility red glow */
+  opacity: 0.95;
 }
 
 /* Icon & Text Color Change on Hover */
 .social-container:hover .btn-social {
   color: #FF0000;
 }
-
