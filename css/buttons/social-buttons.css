@@ -19,9 +19,10 @@
   background: linear-gradient(
     45deg,
     #FF0000 0%,
-    #981A20 25%,
-    #30343F 50%,
-    #981A20 75%,
+    #981A20 8%,
+    #000000 20%,
+    #000000 80%,
+    #981A20 92%,
     #FF0000 100%
   );
 
@@ -36,10 +37,12 @@
 
   background: linear-gradient(
     45deg,
-    #00AEEF,
-    #000000,
-    #000000,
-    #FFB700
+    #FFFFFF 0%,
+    #FF0000 15%,
+    #000000 30%,
+    #000000 70%,
+    #FF0000 85%,
+    #FFFFFF 100%
   );
 
   filter: blur(12px);
@@ -87,7 +90,7 @@
 }
 
 .social-container:hover .btn-social {
-  color: #00AEEF;
+  color: #FF0000;
   border-color: transparent;
 }
 
