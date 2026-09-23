@@ -6,7 +6,7 @@
   height: 52px;
   padding: 1px;
   background: #000000;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 /* Container translation + scale on hover */
@@ -31,9 +31,21 @@
   opacity: 1;
   pointer-events: none;
   z-index: 1;
-  transition: opacity 0.3s ease, inset 0.3s ease;
+  transition: opacity 0.5s ease, inset 0.5s ease;
 }
-
+/* On Hover: Change the Border Gradient Colors */
+.social-container:hover::before {
+  background: linear-gradient(
+    45deg,
+    #000000 0%,
+    #FF0000 8%,
+    #929292 25%,
+    #000000 50%
+    #929292 75%,
+    #FF0000 92%,
+    #000000 100%
+  );
+}
 /* 2. Outer Glow Layer */
 .social-container::after {
   content: '';
@@ -41,17 +53,19 @@
   inset: -2px;
   background: linear-gradient(
     45deg,
-    #FF0000 0%,
-    #981A20 25%,
-    #30343F 50%,
-    #981A20 75%,
-    #FF0000 100%
+    #000000 0%,
+    #FF0000 8%,
+    #929292 25%,
+    #000000 50%
+    #929292 75%,
+    #FF0000 92%,
+    #000000 100%
   );
   filter: blur(12px);
   opacity: 0;
   pointer-events: none;
   z-index: -1;
-  transition: opacity 0.3s ease, inset 0.3s ease;
+  transition: opacity 0.5s ease, inset 0.5s ease;
 }
 
 /* Inner Button Base */
@@ -74,7 +88,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 /* ==========================================================================
@@ -90,7 +104,7 @@
 .social-container:hover::after {
   inset: -6px;
   filter: blur(12px);
-  opacity: 0.95;
+  opacity: 0.8;
 }
 
 /* Icon & Text Color Change on Hover */
