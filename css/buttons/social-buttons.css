@@ -1,106 +1,108 @@
-/* Knightly Arts - Social Media Button Frame */
+/* = Knightly Arts - Dedicated Social Media Buttons (Neon Span Architecture) = */
+/* Outer Wrapper (Fixed Dimensions & Stacking Context) */
 .social-container {
-  display: inline-block;
   position: relative;
-  width: auto;
-  height: 52px;
-  padding: 2px;
-  background: #000000;
-  transition: transform 0.5s ease;
+  width: 100%;
+  max-width: 300px;
+  height: 60px;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
-/* Container translation + scale on hover */
+
+/* Container Translation on Hover */
 .social-container:hover {
-  transform: translateY(-2px) scale(1.015);
+  transform: translateY(-2px);
 }
+
 /* 1. Border Gradient Layer (At Rest) */
 .social-container::before {
   content: '';
   position: absolute;
-  inset: 0; 
-  background: linear-gradient(
-    45deg,
-    #FF0000 0%,
-    #981A20 10%,
-    #292929 20%,
-    #000000 50%,
-    #292929 80%,
-    #981A20 90%,
-    #FF0000 100%
-  );
-  opacity: 1;
-  pointer-events: none;
-  z-index: 1;
-  transition: opacity 0.5s ease, inset 0.5s ease;
-}
-/* Border Gradient Colors on Hover */
-.social-container:hover::before {
+  inset: 0;
   background: linear-gradient(
     45deg,
     #FF0000 0%,
     #981A20 15%,
-    #292929 30%,
-    #FFFFFF 50%,
-    #292929 70%,
+    #30343F 35%,
+    #30343F 65%,
     #981A20 85%,
     #FF0000 100%
   );
+  transition: opacity 0.3s ease;
 }
-/* Outer Glow Layer */
+
+/* 2. Outer Glow Layer */
 .social-container::after {
   content: '';
   position: absolute;
-  inset: -2px;
+  inset: 0;
   background: linear-gradient(
     45deg,
     #FF0000 0%,
-    #981A20 15%,
-    #292929 30%,
-    #FFFFFF 50%,
-    #292929 70%,
-    #981A20 85%,
+    #981A20 25%,
+    #30343F 50%,
+    #981A20 75%,
     #FF0000 100%
   );
-  filter: blur(12px);
+  filter: blur(15px);
   opacity: 0;
-  pointer-events: none;
   z-index: -1;
   transition: opacity 0.5s ease, inset 0.5s ease;
 }
-/* Inner Button Base */
+
+/* Main Link Container */
 .btn-social {
   position: relative;
-  z-index: 10;
+  width: 100%;
   height: 100%;
-  padding: 0 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-
-  background: linear-gradient(45deg, #000000 0%, #292929 80%);
-  border: 1px solid #000000;  /* Thin Black Inner Border */
-
-  color: #FFFFFF;
+  display: block;
   text-decoration: none;
+}
+
+/* 3. Inner Text & Content Container */
+.btn-social span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
-  transition: color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #FFFFFF;
+  border: 1px solid #FF0000;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: color 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
-/* Hover States */
-/* Thinner Border on Hover */
-.social-container:hover {
-  padding: 1px;
+/* Subtle Angled Sheen Effect inside Span */
+.btn-social span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  transform: skew(25deg);
+  pointer-events: none;
 }
-/* Outer Glow Bloom on Hover */
+
+/* = Hover States = */
+/* Outer Glow Expansion */
 .social-container:hover::after {
-  inset: -6px;
-  filter: blur(10px);
-  opacity: 0.75;
+  inset: -2px;
+  opacity: 1;
 }
-/* Icon & Text Color Change on Hover */
-.social-container:hover .btn-social {
+/* Text / SVG Color & Border Shift */
+.social-container:hover .btn-social span {
   color: #FF0000;
+  border-color: transparent;
 }
