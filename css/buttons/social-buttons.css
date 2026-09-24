@@ -22,10 +22,10 @@
   background: linear-gradient(
     45deg,
     #FF0000 0%,
-    #981A20 15%,
-    #292929 35%,
-    #292929 65%,
-    #981A20 85%,
+    #981A20 10%,
+    #292929 30%,
+    #292929 70%,
+    #981A20 90%,
     #FF0000 100%
   );
   transition: background 0.3s ease, opacity 0.3s ease;
@@ -40,7 +40,7 @@
     45deg,
     #FF0000 0%,
     #981A20 25%,
-    #292929 50%,
+    #FF0000 50%,
     #981A20 75%,
     #FF0000 100%
   );
@@ -97,9 +97,9 @@
   background: linear-gradient(
     45deg,
     #FF0000 0%,
-    #FFFFFF 20%,
-    #981A20 50%,
-    #FFFFFF 80%,
+    #FFFFFF 30%,
+    #FF0000 50%,
+    #FFFFFF 70%,
     #FF0000 100%
   );
 }
