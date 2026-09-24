@@ -18,11 +18,12 @@
   position: absolute;
   inset: 0; 
   background: linear-gradient(
-    90deg,
+    45deg,
     #FF0000 0%,
     #981A20 10%,
-    #292929 25%,
-    #292929 85%,
+    #292929 20%,
+    #000000 50%,
+    #292929 80%,
     #981A20 90%,
     #FF0000 100%
   );
@@ -34,11 +35,13 @@
 /* Border Gradient Colors on Hover */
 .social-container:hover::before {
   background: linear-gradient(
-    90deg,
+    45deg,
     #FF0000 0%,
-    #292929 40%,
-    #000000 50%,
-    #292929 60%,
+    #981A20 15%,
+    #292929 30%,
+    #FFFFFF 50%,
+    #292929 70%,
+    #981A20 85%,
     #FF0000 100%
   );
 }
@@ -48,12 +51,14 @@
   position: absolute;
   inset: -2px;
   background: linear-gradient(
-    90deg,
-    #FFFFFF 0%,
-    #981A20 40%,
-    #000000 50%,
-    #981A20 60%,
-    #FFFFFF 100%
+    45deg,
+    #FF0000 0%,
+    #981A20 15%,
+    #292929 30%,
+    #FFFFFF 50%,
+    #292929 70%,
+    #981A20 85%,
+    #FF0000 100%
   );
   filter: blur(12px);
   opacity: 0;
@@ -72,8 +77,8 @@
   justify-content: center;
   gap: 0.75rem;
 
-  background: #000000; 
-  border: none; /* Border supplied by ::before layer */
+  background: linear-gradient(45deg, #000000 0%, #292929 80%);
+  border: 1px solid #000000;  /* Thin Black Inner Border */
 
   color: #FFFFFF;
   text-decoration: none;
@@ -89,11 +94,11 @@
 .social-container:hover {
   padding: 1px;
 }
-/* Prominent Outer Glow Bloom on Hover */
+/* Outer Glow Bloom on Hover */
 .social-container:hover::after {
   inset: -6px;
   filter: blur(10px);
-  opacity: 0.8;
+  opacity: 0.75;
 }
 /* Icon & Text Color Change on Hover */
 .social-container:hover .btn-social {
