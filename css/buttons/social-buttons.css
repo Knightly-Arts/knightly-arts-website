@@ -12,7 +12,6 @@
 .social-container:hover {
   transform: translateY(-2px) scale(1.015);
 }
-
 /* 1. Border Gradient Layer (At Rest) */
 .social-container::before {
   content: '';
@@ -65,7 +64,6 @@
   z-index: -1;
   transition: opacity 0.5s ease, inset 0.5s ease;
 }
-
 /* Inner Button Base */
 .btn-social {
   position: relative;
@@ -78,7 +76,7 @@
   gap: 0.75rem;
 
   background: #000000; 
-  border: none;       /* Border supplied by ::before layer */
+  border: none; /* Border supplied by ::before layer */
 
   color: #FFFFFF;
   text-decoration: none;
@@ -86,23 +84,20 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
-  transition: color 0.5s ease;
+  transition: color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Hover States */
-
 /* Thinner Border on Hover */
 .social-container:hover {
   padding: 1px;
 }
-
 /* Prominent Outer Glow Bloom on Hover */
 .social-container:hover::after {
   inset: -6px;
   filter: blur(12px);
   opacity: 0.8;
 }
-
 /* Icon & Text Color Change on Hover */
 .social-container:hover .btn-social {
   color: #FF0000;
