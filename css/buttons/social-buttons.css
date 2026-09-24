@@ -54,11 +54,10 @@
   background: linear-gradient(
     45deg,
     #FFFFFF 0%,
-    #FF0000 15%,
-    #000000 30%,
-    #FFFFFF 50%,
-    #000000 70%,
-    #FF0000 85%,
+    #981A20 15%,
+    #000000 45%,
+    #000000 55%,
+    #981A20 85%,
     #FFFFFF 100%
   );
   filter: blur(12px);
