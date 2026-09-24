@@ -18,11 +18,11 @@
   position: absolute;
   inset: 0; 
   background: linear-gradient(
-    45deg,
+    90deg,
     #FF0000 0%,
     #981A20 10%,
-    #292929 40%,
-    #292929 60%,
+    #292929 25%,
+    #292929 85%,
     #981A20 90%,
     #FF0000 100%
   );
@@ -35,11 +35,11 @@
 .social-container:hover::before {
   background: linear-gradient(
     90deg,
-    #FFFFFF 0%,
+    #FF0000 0%,
     #292929 40%,
     #000000 50%,
     #292929 60%,
-    #FFFFFF 100%
+    #FF0000 100%
   );
 }
 /* Outer Glow Layer */
@@ -49,11 +49,11 @@
   inset: -2px;
   background: linear-gradient(
     90deg,
-    #FF0000 0%,
+    #FFFFFF 0%,
     #981A20 40%,
     #000000 50%,
     #981A20 60%,
-    #FF0000 100%
+    #FFFFFF 100%
   );
   filter: blur(12px);
   opacity: 0;
