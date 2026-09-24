@@ -1,13 +1,10 @@
-/* ==========================================================================
-   Knightly Arts - Dedicated Social Media Buttons (Neon Span Architecture)
-   ========================================================================== */
-
-/* Outer Wrapper (Sized compact to match site buttons) */
+/* Knightly Arts - Dedicated Social Media Buttons (Neon Span Architecture) */
+/* Outer Wrapper */
 .social-container {
   position: relative;
   width: 100%;
   max-width: 220px;
-  height: 44px;
+  height: 50px;
   display: inline-block;
   transition: transform 0.3s ease;
 }
@@ -26,12 +23,12 @@
     45deg,
     #FF0000 0%,
     #981A20 15%,
-    #30343F 35%,
-    #30343F 65%,
+    #292929 35%,
+    #292929 65%,
     #981A20 85%,
     #FF0000 100%
   );
-  transition: opacity 0.3s ease;
+  transition: background 0.3s ease, opacity 0.3s ease;
 }
 
 /* 2. Outer Glow Layer */
@@ -43,7 +40,7 @@
     45deg,
     #FF0000 0%,
     #981A20 25%,
-    #30343F 50%,
+    #292929 50%,
     #981A20 75%,
     #FF0000 100%
   );
@@ -65,7 +62,7 @@
 /* 3. Inner Text & Content Container (Insets 2px to expose outer gradient) */
 .btn-social span {
   position: absolute;
-  inset: 2px; /* Pulls span inwards by 2px to reveal gradient border */
+  inset: 1px; 
   background: #000000;
   z-index: 1;
   display: flex;
@@ -94,16 +91,23 @@
   pointer-events: none;
 }
 
-/* ==========================================================================
-   Hover States
-   ========================================================================== */
-
+/* Hover States */
+/* Border Gradient Shift on Hover */
+.social-container:hover::before {
+  background: linear-gradient(
+    45deg,
+    #FF0000 0%,
+    #FFFFFF 20%,
+    #981A20 50%,
+    #FFFFFF 80%,
+    #FF0000 100%
+  );
+}
 /* Outer Glow Expansion */
 .social-container:hover::after {
   inset: -3px;
   opacity: 0.9;
 }
-
 /* Text / SVG Color Shift */
 .social-container:hover .btn-social span {
   color: #FF0000;
