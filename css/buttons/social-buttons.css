@@ -19,12 +19,12 @@
   inset: 0; 
   background: linear-gradient(
     45deg,
-    #981A20 0%,
-    #FF0000 8%,
-    #292929 20%,
-    #292929 80%,
-    #FF0000 92%,
-    #981A20 100%
+    #FF0000 0%,
+    #981A20 10%,
+    #292929 40%,
+    #292929 60%,
+    #981A20 90%,
+    #FF0000 100%
   );
   opacity: 1;
   pointer-events: none;
@@ -34,12 +34,12 @@
 /* Border Gradient Colors on Hover */
 .social-container:hover::before {
   background: linear-gradient(
-    45deg,
-    #FF0000 0%,
+    90deg,
+    #FFFFFF 0%,
     #292929 40%,
     #000000 50%,
     #292929 60%,
-    #FF0000 100%
+    #FFFFFF 100%
   );
 }
 /* Outer Glow Layer */
@@ -48,7 +48,7 @@
   position: absolute;
   inset: -2px;
   background: linear-gradient(
-    45deg,
+    90deg,
     #FF0000 0%,
     #981A20 40%,
     #000000 50%,
@@ -92,7 +92,7 @@
 /* Prominent Outer Glow Bloom on Hover */
 .social-container:hover::after {
   inset: -6px;
-  filter: blur(12px);
+  filter: blur(10px);
   opacity: 0.8;
 }
 /* Icon & Text Color Change on Hover */
