@@ -20,7 +20,7 @@
   position: absolute;
   inset: 0; /* Provides base border thickness (2px offset around button) */
   background: linear-gradient(
-    135deg,
+    45deg,
     #981A20 0%,
     #FF0000 8%,
     #000000 20%,
@@ -36,7 +36,7 @@
 /* On Hover: Change the Border Gradient Colors */
 .social-container:hover::before {
   background: linear-gradient(
-    135deg,
+    45deg,
     #FFFFFF 0%,
     #FF0000 8%,
     #000000 30%,
@@ -52,13 +52,13 @@
   position: absolute;
   inset: -2px;
   background: linear-gradient(
-    135deg,
+    45deg,
     #FFFFFF 0%,
-    #FF0000 8%,
+    #FF0000 15%,
     #000000 30%,
-    #292929 50%,
+    #FFFFFF 50%,
     #000000 70%,
-    #FF0000 92%,
+    #FF0000 85%,
     #FFFFFF 100%
   );
   filter: blur(12px);
