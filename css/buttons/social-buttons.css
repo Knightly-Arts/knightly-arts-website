@@ -107,8 +107,8 @@
 }
 /* Outer Glow Expansion */
 .social-container:hover::after {
-  inset: -3px;
-  opacity: 0.9;
+  inset: -2px;
+  opacity: 1;
 }
 /* Text / SVG Color Shift */
 .social-container:hover .btn-social span {
