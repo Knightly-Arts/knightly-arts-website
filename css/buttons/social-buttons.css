@@ -25,8 +25,8 @@
     #981A20 10%,
     #292929 25%,
     #292929 75%,
-    #981A20 90%,
-    #FF0000 100%
+    #949494 90%,
+    #FFFFFF 100%
   );
   transition: background 0.5s ease, opacity 0.5s ease;
 }
@@ -41,7 +41,7 @@
     #FF0000 0%,
     #000000 40%,
     #000000 60%,
-    #FF0000 100%
+    #FFFFFF 100%
   );
   filter: blur(15px);
   opacity: 0;
@@ -97,10 +97,10 @@
     45deg,
     #FF0000 0%,
     #FF0000 20%,
-    #FFFFFF 40%,
-    #FFFFFF 60%,
-    #FF0000 80%,
-    #FF0000 100%
+    #292929 40%,
+    #292929 60%,
+    #FFFFFF 80%,
+    #FFFFFF 100%
   );
 }
 /* Outer Glow Expansion */
