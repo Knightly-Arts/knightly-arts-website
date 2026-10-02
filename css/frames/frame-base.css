@@ -12,13 +12,16 @@
   --frame-hover-br-2: #DB9A2A; /* Bottom-Right Outer */
   /* Frame Outline and Background */
   --frame-gray: #202020;
-  --frame-bg: #000000;
+  --frame-bg: rgba(0, 0, 0, 0.75);
 
   position: relative;
   border-radius: 0px;
   margin: 6px auto;
+  /* Glass Properties */
   background: var(--frame-bg);
-  transition: background 0.5s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background 0.5s ease, backdrop-filter 0.5s ease;
 }
 
 /* Complete Enclosed Frame (Border + Gray Extension) */
