@@ -59,8 +59,8 @@
     45deg,
     var(--frame-hover-tl-1) 0%,
     var(--frame-hover-tl-2) 15%,
-    var(--frame-bg) 40%,
-    var(--frame-bg) 60%,
+    var(--frame-bg) 30%,
+    var(--frame-bg) 70%,
     var(--frame-hover-br-1) 85%,
     var(--frame-hover-br-2) 100%);
 
@@ -77,8 +77,8 @@
     45deg,
     var(--frame-hover-tl-1) 0%,
     var(--frame-hover-tl-2) 8%,
-    var(--frame-gray) 30%,
-    var(--frame-gray) 70%,
+    var(--frame-gray) 40%,
+    var(--frame-gray) 60%,
     var(--frame-hover-br-1) 92%,
     var(--frame-hover-br-2) 100%);
 }
