@@ -52,27 +52,39 @@
 .project-frame::after {
   content: '';
   position: absolute;
-  inset: 0px;
+  inset: -3px;
   border-radius: 0px;
+
   background: linear-gradient(
     45deg,
     var(--frame-hover-tl-1) 0%,
-    var(--frame-hover-tl-2) 10%,
-    transparent 25%,
-    transparent 75%,
-    var(--frame-hover-br-1) 90%,
-    var(--frame-hover-br-2) 100%
-  );
-  filter: blur(7px); /* Sharper blur restricts inward bleed */
+    var(--frame-hover-tl-2) 15%,
+    var(--frame-bg) 40%,
+    var(--frame-bg) 60%,
+    var(--frame-hover-br-1) 85%,
+    var(--frame-hover-br-2) 100%);
+
+  filter: blur(12px);
   opacity: 0;
   pointer-events: none;
   z-index: -1;
   transition: opacity 0.5s ease, inset 0.5s ease;
 }
-
-/* Hover Glow Trigger - Expands outward */
+/* Frame on Hover */
+.project-frame:has(.container a:hover)::before,
+.project-frame:has(.btn-neon:hover)::before {
+  background: linear-gradient(
+    45deg,
+    var(--frame-hover-tl-1) 0%,
+    var(--frame-hover-tl-2) 8%,
+    var(--frame-gray) 40%,
+    var(--frame-gray) 60%,
+    var(--frame-hover-br-1) 92%,
+    var(--frame-hover-br-2) 100%);
+}
+/* Hover Glow Trigger */
 .project-frame:has(.container a:hover)::after,
 .project-frame:has(.btn-neon:hover)::after {
-  inset: -8px; /* Expands further outward without growing inward */
-  opacity: 0.85;
+  inset: -6px;
+  opacity: 0.8;
 }
