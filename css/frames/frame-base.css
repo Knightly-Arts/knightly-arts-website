@@ -64,7 +64,7 @@
     var(--frame-hover-br-1) 85%,
     var(--frame-hover-br-2) 100%);
 
-  filter: blur(12px);
+  filter: blur(8px);
   opacity: 0;
   pointer-events: none;
   z-index: -1;
@@ -77,8 +77,8 @@
     45deg,
     var(--frame-hover-tl-1) 0%,
     var(--frame-hover-tl-2) 8%,
-    var(--frame-gray) 40%,
-    var(--frame-gray) 60%,
+    var(--frame-gray) 30%,
+    var(--frame-gray) 70%,
     var(--frame-hover-br-1) 92%,
     var(--frame-hover-br-2) 100%);
 }
