@@ -52,26 +52,21 @@
 .project-frame::after {
   content: '';
   position: absolute;
-  inset: -3px;
+  inset: 0px;
   border-radius: 0px;
   background: linear-gradient(
     45deg,
     var(--frame-hover-tl-1) 0%,
-    var(--frame-hover-tl-2) 15%,
-    transparent 40%,
-    transparent 60%,
-    var(--frame-hover-br-1) 85%,
+    var(--frame-hover-tl-2) 10%,
+    transparent 25%,
+    transparent 75%,
+    var(--frame-hover-br-1) 90%,
     var(--frame-hover-br-2) 100%
   );
-  filter: blur(8px); /* Reduced blur to keep edge crisp */
+  filter: blur(7px); /* Sharper blur restricts inward bleed */
   opacity: 0;
   pointer-events: none;
   z-index: -1;
-
-  /* Mask out the center to prevent glow from bleeding far into the middle */
-  -webkit-mask: radial-gradient(circle, transparent 50%, black 85%);
-  mask: radial-gradient(circle, transparent 50%, black 85%);
-
   transition: opacity 0.5s ease, inset 0.5s ease;
 }
 
@@ -81,4 +76,3 @@
   inset: -8px; /* Expands further outward without growing inward */
   opacity: 0.85;
 }
-
