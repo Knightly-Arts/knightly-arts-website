@@ -8,12 +8,12 @@ body {
    NeoTech Origins Hero
    ============================== */
 
-.neotech-hero {
-    background: radial-gradient(circle at center,
-        rgba(0, 174, 239, 0.08) 0%,
-        rgba(0, 174, 239, 0.03) 30%,
-        rgba(0, 0, 0, 0) 65%),
-        #000000;
+.neotech-hero img {
+    filter:
+        drop-shadow(0 0 18px rgba(0, 174, 239, 0.18))
+        drop-shadow(0 0 40px rgba(0, 174, 239, 0.08));
+
+    transition: filter 0.5s ease;
 }
 
 
